@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './Button';
+import { HashLink as Link } from 'react-router-hash-link';
 
 export default function Header() {
     return (
@@ -9,7 +9,9 @@ export default function Header() {
                     <div className="page-headings">
                         <h1>we serve fresh vegetables & fruits</h1>
                         <h2>we deliver organic vegetables & fruits</h2>
-                        <Button text="Go To Shop" type="primary" url="#shop" />
+                        <Link to="#shop" style={{ textDecoration: 'none' }}>
+                            <div className="btn btn-primary">Go to shop</div>
+                        </Link>
                     </div>
                 </div>
             </div>

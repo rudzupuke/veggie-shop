@@ -1,6 +1,7 @@
 import React from 'react';
 import { Product } from '../types';
 import { nanoid } from 'nanoid';
+import { HashLink as Link } from 'react-router-hash-link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnglesDown } from '@fortawesome/free-solid-svg-icons';
 import { faAnglesUp } from '@fortawesome/free-solid-svg-icons';
@@ -44,7 +45,7 @@ export default function NewProductForm({ addProducts }: Props) {
     return (
         <>
             <div className="open-form" onClick={openForm}>
-                <a href="#form">{isOpen ? arrowUp : arrowDown}</a>
+                <Link to="#form">{isOpen ? arrowUp : arrowDown}</Link>
             </div>
             {isOpen && (
                 <div className="form fade-in" id="form">
