@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/veggie-shop/static/css/main.d707dc62.css",
-    "main.js": "/veggie-shop/static/js/main.c6be31ac.js",
+    "main.js": "/veggie-shop/static/js/main.b11e6a20.js",
     "static/media/tomatobasilrosemary.jpg": "/veggie-shop/static/media/tomatobasilrosemary.c05ef559e8e60a2a509e.jpg",
     "index.html": "/veggie-shop/index.html",
     "main.d707dc62.css.map": "/veggie-shop/static/css/main.d707dc62.css.map",
-    "main.c6be31ac.js.map": "/veggie-shop/static/js/main.c6be31ac.js.map"
+    "main.b11e6a20.js.map": "/veggie-shop/static/js/main.b11e6a20.js.map"
   },
   "entrypoints": [
     "static/css/main.d707dc62.css",
-    "static/js/main.c6be31ac.js"
+    "static/js/main.b11e6a20.js"
   ]
 }
