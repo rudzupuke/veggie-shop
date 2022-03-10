@@ -1,0 +1,40 @@
+@use '../abstracts';
+
+.cart-open {
+    background-color: #f1f3f4;
+    height: 95vh;
+    position: fixed;
+    top: 59px;
+    left: 0;
+    right: 0;
+}
+
+.cart {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    height: 95vh;
+    font-family: abstracts.$primary-font;
+
+    &-products {
+        h1 {
+            padding: 1em 0;
+        }
+    }
+
+    &-price {
+        padding: 2em;
+    }
+}
+
+@media (max-width: 1300px) {
+    .cart {
+        grid-template-columns: 75% 25%;
+    }
+}
+
+@media (max-width: 1015px) {
+    .cart {
+        display: flex;
+        flex-direction: column;
+    }
+}

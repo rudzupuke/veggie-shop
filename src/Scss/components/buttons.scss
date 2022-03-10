@@ -1,0 +1,43 @@
+@use '../abstracts';
+
+.btn {
+    padding: 0.5em 1em;
+    text-decoration: none;
+    font-family: abstracts.$btn-font;
+    border-radius: 20px;
+
+    &-primary {
+        background-color: darken(abstracts.$green, 10%);
+        color: abstracts.$white;
+        transition: 0.5s ease-in;
+    }
+
+    &-primary:hover {
+        background-color: darken(abstracts.$green, 3%);
+    }
+}
+
+.btn-buy {
+    @extend .btn;
+    font-weight: 600;
+    border: none;
+    background-color: abstracts.$green;
+    padding: 0.5em 1.5em;
+    cursor: pointer;
+
+    &:hover {
+        background-color: lighten(abstracts.$green, 5%);
+    }
+}
+
+.btn-submit {
+    @extend .btn;
+    border: none;
+    cursor: pointer;
+    padding: 0.5em 1.5em;
+
+    &:hover {
+        background-color: darken(abstracts.$green, 10%);
+        color: #fff;
+    }
+}

@@ -1,0 +1,98 @@
+@use '../abstracts';
+@mixin vertical-center {
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.product-in-cart {
+    display: grid;
+    grid-template-columns: 10% 35% 40% 10% 10%;
+    background-color: #fff;
+    margin-right: 30px;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    padding: 10px;
+
+    &__image {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    &__name,
+    &__price,
+    &__remove,
+    &__counter {
+        @include vertical-center;
+    }
+
+    &__name {
+        padding-left: 1em;
+        font-size: 18px;
+    }
+
+    &__counter {
+        &-change {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ebebeb;
+            color: #756a6a;
+            border-radius: 9px;
+            cursor: pointer;
+
+            &:hover {
+                color: abstracts.$green;
+                background-color: #f0f0f0;
+            }
+        }
+
+        &-count {
+            margin: 0 15px;
+        }
+    }
+
+    &__price-1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+    &__price-2 {
+        display: flex;
+        flex-direction: column;
+
+        span:first-child {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        span:last-child {
+            font-size: 0.7rem;
+            font-weight: 500;
+        }
+    }
+
+    &__remove {
+        font-size: 1.5rem;
+        color: #756a6a;
+        cursor: pointer;
+
+        &:hover {
+            color: abstracts.$green;
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .product-in-cart {
+        grid-template-columns: 12% 30% 40% 13% 10%;
+    }
+}
+
+@media (max-width: 750px) {
+    .product-in-cart {
+        grid-template-columns: 15% 30% 35% 13% 10%;
+    }
+}

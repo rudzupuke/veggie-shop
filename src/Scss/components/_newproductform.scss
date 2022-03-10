@@ -1,0 +1,39 @@
+@use '../abstracts';
+
+.form {
+    background-color: abstracts.$green;
+    padding: 100px 0;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    input {
+        width: 400px;
+        height: 40px;
+        border-radius: 9px;
+        padding: 5px;
+        border: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.open-form {
+    font-size: 18px;
+    text-align: right;
+    margin: 1em;
+    cursor: pointer;
+
+    a {
+        color: black;
+        &:hover {
+            color: abstracts.$green;
+        }
+    }
+}

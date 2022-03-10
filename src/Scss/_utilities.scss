@@ -1,0 +1,27 @@
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.round-top {
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+}
+
+.hidden {
+    display: none;
+}
+
+.fade-in {
+    animation: fadeInAnimation 2s;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

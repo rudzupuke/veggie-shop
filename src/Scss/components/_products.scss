@@ -1,0 +1,62 @@
+@use '../abstracts';
+
+@mixin product-font {
+    font-family: abstracts.$primary-font;
+}
+
+@mixin sentence-case {
+    text-transform: lowercase;
+
+    &:first-letter {
+        text-transform: uppercase;
+    }
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2%;
+}
+
+.shop-name {
+    @include product-font;
+    padding: 1em 0;
+}
+
+.product-container {
+    background-color: #fff;
+    width: 270px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    margin-bottom: 50px;
+
+    &__img {
+        object-fit: cover;
+        width: 270px;
+        height: 270px;
+    }
+
+    &__info {
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__name {
+        @include product-font;
+        @include sentence-case;
+        font-size: 18px;
+        padding: 0.5em 0;
+    }
+
+    &__price {
+        @include product-font;
+        font-size: 16px;
+        padding-bottom: 1em;
+    }
+}
+
+.product-container:hover {
+    filter: brightness(105%);
+}
