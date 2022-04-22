@@ -66,19 +66,17 @@ export default function Cart({ allProducts, allProductsInCart, setProductsInCart
     }
 
     return (
-        <div className="cart-open">
-            <div className="container cart">
-                <div className="cart-products">
-                    <h1>
-                        {allProductsInCart.length > 0
-                            ? 'You have ' + allProductsInCart.length + ' products in your cart!'
-                            : 'Your cart is empty!'}
-                    </h1>
-                    {cartProducts}
-                </div>
-                <div className="cart-price">
-                    <h2>{`Total: ${totalPrice.toFixed(2)} €`}</h2>
-                </div>
+        <div className="container cart">
+            <div className="cart-products">
+                <h1>
+                    {allProductsInCart.length > 0
+                        ? 'You have ' + allProductsInCart.length + ' products in your cart!'
+                        : 'Your cart is empty!'}
+                </h1>
+                {cartProducts}
+            </div>
+            <div className="cart-price">
+                <h2>{`Total: ${totalPrice.toFixed(2)} €`}</h2>
             </div>
         </div>
     );
